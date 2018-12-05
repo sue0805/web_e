@@ -14,10 +14,13 @@
         padding: 0;
         overflow: hidden;
         background-color: rgb(231, 231, 231);
+        
     }
 
     .menubar.menuitem{
         float: left;
+        overflow: hidden;
+        
     }
 
     .menubar.menuitem>a{
@@ -28,19 +31,23 @@
         padding: 2px 15px;
         font-size: 13px;
         background-color: rgb(231, 231, 231);
+        
     }
 
+    a{
+        cursor: default !important;
+    }
     .menubar.menuitem>a:hover{
-        background-color: rgb(189, 253, 232);
+        background-color: rgb(150, 150, 150);
         opacity: 0.5;
-        border: 1px solid rgb(132, 201, 178);
+        border: 1px solid rgb(51, 51, 51);
     }
 
     .packex{
-        list-style-type: none;
+        list-style-image: url('folder.png');
+        list-style-position: inside;
         margin: 0px;
         padding: 0px;
-        overflow: hidden;
         text-align: left;
     }
 
@@ -48,7 +55,7 @@
         display:block;
         width:100%;
         padding: 5px 20px;
-        margin: 0;
+        margin: 0px;
         text-decoration: none;
         color: rgb(197, 197, 197);
         font-size:15px;
@@ -68,7 +75,6 @@
 
     .column {
         float: left;
-        overflow: hidden;
     }
 
     .column.left {
@@ -94,7 +100,7 @@
         background-color: rgb(60, 60, 60);
         padding: 4px;
         font-size: 12px;
-        overflow: hidden;
+        overflow: hidden !important;
         color: rgb(197, 197, 197);
         cursor: default;
     }
@@ -103,7 +109,7 @@
         float: left;
         display:block;
         background-color: rgb(100, 100, 100);
-        padding: 4px 30px;
+        padding: 4px 20px;
         font-size: 12px;
         overflow: hidden;
         color: rgb(197, 197, 197);
@@ -130,7 +136,7 @@
 
     .column.right>pre{
         margin: 0;
-        padding: 10px 10px 10px 70px;
+        padding: 10px 10px 10px 10px;
         color: rgb(197, 197, 197);
         font-size: 15px;
         font-weight: bold;
@@ -142,7 +148,7 @@
     }
 
     .types{
-        color:royalblue;
+        color:dodgerblue;
     }
 
     .vars{
@@ -155,10 +161,16 @@
         font-weight: normal;
         font-style: italic;
     }
-
+    .comments{
+        color:lightsalmon; 
+        font-style: italic
+    }
     .my{
         color:paleturquoise;
-        /* font-weight: normal; */
+    }
+
+    .methodcall{
+        color: green;
     }
     .footer {
         background-color: rgb(100, 100, 100);
@@ -185,7 +197,7 @@
         background-color:rgb(231, 231, 231);
         min-width: 160px;
         box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-        z-index: 1;
+        
     }
 
     .dropdown-content a {
@@ -197,8 +209,37 @@
         font-size: 12px;
     }
 
-    .dropdown-content a:hover {background-color: #f1f1f1}
+    .dropdown-content a:hover {
+        background-color: rgb(190, 222, 233);
+        border: 1px solid rgb(141, 197, 194);
+        opacity: 0.8;
+    }
 
     .dropdown:hover .dropdown-content {
         display: block;
+    }
+
+    .accordion {
+        cursor: default;
+        padding: 5px 20px;
+        width: 100%;
+        border: none;
+        text-align: left;
+        outline: none;
+        font-size: 15px;
+        transition: 0.4s;
+        
+    }
+    
+    .accordion:hover {
+        background-color: rgb(60, 60, 60);
+        border: 1px solid rgb(134, 134, 134);
+        opacity: 0.8;
+        
+    }
+    
+    .panel {
+        display: none;
+        overflow: hidden;
+        
     }
